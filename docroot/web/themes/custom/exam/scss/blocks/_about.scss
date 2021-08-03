@@ -1,0 +1,31 @@
+.block-aboutblock {
+    @extend %container;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 5px solid $black_text;
+    border-bottom: 5px solid  $blue_text;
+    padding: 10px 0;
+    width: max-content;
+    h2 {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+    .field--name-body {
+        display: inline-block;
+        p {
+            color: $gray_text;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+
+        }
+        a {
+            vertical-align: middle;
+            display: inline-block;
+            padding: 5px;
+            color: $white_text;
+            background-color: $blue_text;
+        }
+    }
+}

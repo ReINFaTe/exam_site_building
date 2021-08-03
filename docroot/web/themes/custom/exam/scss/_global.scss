@@ -1,0 +1,40 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.block-views {
+    & > h2 {
+        max-width: 1440px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 70px auto;
+        overflow: hidden;
+        &::before, &::after {
+            background-color: $gray_text;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
+        &::before{
+            right: 0.5em;
+            margin-left: -50%;
+        }
+        &::after{
+            left: 0.5em;
+            margin-right: -50%;
+        }
+    }
+}
