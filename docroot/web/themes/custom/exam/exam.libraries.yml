@@ -3,3 +3,7 @@ global-styling:
   css:
     base:
       css/style.min.css: {}
+  js:
+    js/menu.js: {}
+  dependencies:
+    - core/jquery
