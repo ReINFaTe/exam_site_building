@@ -1,0 +1,4 @@
+name: Drupal OwlCarousel
+description: slider
+type: module
+core_version_requirement: ^9

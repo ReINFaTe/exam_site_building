@@ -1,0 +1,6 @@
+<?php
+function drupal_owlcarousel_preprocess_views_view(&$variables) {
+  if ($variables['view']->storage->id() == 'clients') {
+    $variables['#attached']['library'][] = 'drupal_owlcarousel/drupal_owlcarousel';
+  }
+}
