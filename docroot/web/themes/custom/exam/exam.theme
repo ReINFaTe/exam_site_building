@@ -1,4 +1,6 @@
 <?php
-function exam_preprocess_views_view_fields(&$variables)
-{
+
+
+function exam_form_search_block_form_alter(&$form, &$form_state) {
+    $form['keys']['#attributes']['placeholder'][] = t('Search');
 }

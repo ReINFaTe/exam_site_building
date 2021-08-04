@@ -8,6 +8,12 @@
         gap: 5rem;
         .views-row {
             flex: 1 1 calc((100% / 4) - 15rem);
+            @media (max-width: $point-exl) {
+                flex: 1 1 calc((100% / 2) - 10rem);
+            }
+            @media (max-width: $point-sm) {
+                flex: 1 1 100%;
+            }
             text-transform: uppercase;
             h2 {
                 font-weight: 400;

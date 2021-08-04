@@ -5,11 +5,12 @@
     border-top: 5px solid $black_text;
     border-bottom: 5px solid  $blue_text;
     padding: 10px 0;
-    width: max-content;
+    display: flex;
+    justify-content: center;
     h2 {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 15px;
+        margin-right: auto;
     }
     .field--name-body {
         display: inline-block;
@@ -27,5 +28,11 @@
             color: $white_text;
             background-color: $blue_text;
         }
+    }
+    @media (max-width: $point-sm) {
+        h2{
+            margin-right: 0;
+        }
+        flex-direction: column;
     }
 }
