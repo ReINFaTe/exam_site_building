@@ -13,8 +13,8 @@ set -e
 
 # PROJECT_ROOT and DOCROOT are set as env variables in cli
 SITE_DIRECTORY="default"
-DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}/web"
-SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
+WEB_PATH="${PROJECT_ROOT}/docroot/web"
+SITEDIR_PATH="${WEB_PATH}/sites/${SITE_DIRECTORY}"
 
 #-------------------------- END: Settings --------------------------------
 
@@ -55,7 +55,7 @@ copy_settings_file()
 
 composer_install ()
 {
-	cd "$PROJECT_ROOT"
+	cd "${WEB_PATH}"
 	echo-green "Installing dependencies..."
 	composer install
 }
@@ -80,14 +80,6 @@ fix_permissions ()
 	chmod 755 "${SITEDIR_PATH}"
 }
 
-# Install site
-site_install ()
-{
-	cd "$DOCROOT_PATH"
-
-	echo-green "Installing Database..."
-	db import /database.sql
-}
 
 #-------------------------- END: Functions --------------------------------
 
@@ -96,8 +88,7 @@ site_install ()
 # Project initialization steps
 time -p composer_install
 fix_permissions
-init_settings
-time -p site_install
+
 
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 echo-yellow "Look for admin login credentials in the output above."

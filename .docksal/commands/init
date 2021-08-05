@@ -31,7 +31,8 @@ fin project reset -f
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
 fin init-site
-
+echo -e "${green_bg} Step 3 ${NC}${green} Importing database...${NC}"
+fin db import database.sql
 echo -e "${green_bg} DONE! ${NC}${green} Completed all initialization steps.${NC}"
 
 #-------------------------- END: Execution --------------------------------
