@@ -40,7 +40,6 @@ docroot/web/sites/*/settings*.php
 docroot/web/sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
-docroot/web/sites/*/files
 docroot/web/sites/*/private
 
 # Ignore SimpleTest multi-site environment.
