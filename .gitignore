@@ -35,8 +35,8 @@ docroot/web/libraries/
 docroot/vendor/
 
 # Ignore configuration files that may contain sensitive information.
-docroot/web/sites/*/settings*.php
-docroot/web/sites/*/services*.yml
+# docroot/web/sites/*/settings*.php
+# docroot/web/sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
 docroot/web/sites/*/private
