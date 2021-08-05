@@ -1,0 +1,163 @@
+.block-views-block-news-block-1 {
+    h2 {
+        margin-bottom: 10px;
+    }
+    .view-news {
+        padding-top: 60px;
+        padding-bottom: 150px;
+        background: repeating-linear-gradient(
+            -45deg,
+            $gray_text,
+            $gray_text 10%,
+            transparent 10%,
+            transparent 50%
+          );
+        background-size: 8px 8px;
+        .view-content {
+            @extend %container;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            .views-row {
+                background-color: $white_text;
+                flex: 1 1 calc((100% / 2) - 6rem);
+                @media (max-width: $point-lg) {
+                    flex: 1 1 100%;
+                }
+                text-transform: uppercase;
+                display: grid;
+                padding: 20px;
+                grid-template-areas: 
+                    "a b"
+                    "a c";
+                @media (max-width: $point-sm) {
+                    grid-template-areas: 
+                    "a b"
+                    "c c";
+                }
+                .news-item-created {
+                    grid-area: a;
+                    padding-right: 20px;
+                    span {
+                        text-align: center;
+                        display: block;
+                        line-height: 0.9em;
+                        margin: 0;
+                    }
+                    .date-month {
+                        font-size: 30px;
+                        color: $black_text;
+                    }
+                    .date-day {
+                        font-size: 60px;
+                        font-weight: bold;
+                        color: $blue_text;
+    
+                    }
+                    .date-year {
+                        color: $gray_text;
+                    }
+                }
+                .news-item-authored {
+                    grid-area: b;
+                    padding-left: 20px;
+                    border-left: 2px solid $gray_text;
+                    margin-bottom: 20px;
+                    
+                    .fields- {
+                        &user-first-name,
+                        &user-last-name,
+                        &user-position,
+                        &created-ago{
+                            font-size: 12px;
+                        }
+                        &user-picture {
+                            display: inline-block;
+                            vertical-align: top;
+                            img {
+                                display: block;
+                            }
+                        }
+                        &user-first-name {
+                            &::before {
+                                content: "writer";
+                                color: $gray_text;
+                            }
+                        }
+                        &user-position {
+                            color: $blue_text;
+                            &::before {
+                                content: "/";
+                            }
+                        }
+                        &created-ago {
+                            float: right;
+                            color: $gray_text
+                        }
+                    }
+                }
+                .news-item-content {
+                    grid-area: c;
+                    padding-left: 20px;
+                    border-left: 2px solid $gray_text;
+                    .link-to-node {
+                        float: right;
+                        margin-top: 10px;
+                        a {
+                            display: block;
+                            padding: 10px;
+                            color: $white_text;
+                            background-color: $black_text;
+                        }
+
+                    }
+                    h2{
+                        font-weight: normal;
+                        &::after{
+                            content: "...";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.view-filters {
+    @extend %container;
+    .form--inline {
+        width: max-content;
+        background-color: $gray_text;
+        padding: 5px;
+        margin-bottom: 20px;
+        label {
+            display: none;
+        }
+        .form-item,
+        .form-actions{
+            margin-top: 0;
+            margin-bottom: 0;
+            input{
+                height: 2.5em;
+                border: 1px solid rgba($black_text, 0.5);
+                border-radius: 4px;
+            }
+        }
+        .form-item {
+            input {
+                &::placeholder{
+                    color: $gray_text;
+                    padding-left: 15px;
+                }
+            }
+        }
+        .form-actions{
+            display: inline-block;
+            color: $white_text;
+            input {
+                background-color: $blue_text;
+                padding-left: 15px; 
+                padding-right: 15px; 
+            }
+        }
+    }
+}

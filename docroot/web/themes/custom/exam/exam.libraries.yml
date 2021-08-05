@@ -1,0 +1,10 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/style.min.css: {}
+  js:
+    js/menu.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
