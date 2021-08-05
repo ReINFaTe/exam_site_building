@@ -39,6 +39,26 @@
                     color: $black_text;
                     margin: 20px 0 10px;
                 }
+                .project-service-php-development {
+                    .field--name-field-service {
+                        color: $blue_text;
+                    }
+                }
+                .project-service-web-development {
+                     .field--name-field-service {
+                        color: $gray_text;
+                     }
+                }
+                .project-service-app-development {
+                     .field--name-field-service {
+                         color: red;
+                     }
+                }
+                .project-service-drupal-project {
+                     .field--name-field-service {
+                        color: $logo_background;
+                     }
+                }
                 .field--name-field-service {
                     color: $gray_text;
                     font-size: 12px;

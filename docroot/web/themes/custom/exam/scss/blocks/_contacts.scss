@@ -27,6 +27,7 @@
         }
     }
     .block-contactmap {
+        margin-left: 20px;
         .field {
             display: flex;
             flex-direction: column;
@@ -40,6 +41,19 @@
         iframe {
             border: none;
             margin-top: auto;
+        }
+
+    }
+    @media (max-width: $point-xl) {
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        .block-contactmap {
+            flex-basis: 100%;
+            text-align: center;
+            iframe {
+                width: 100%;
+            }
         }
     }
 }

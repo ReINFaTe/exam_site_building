@@ -30,7 +30,11 @@
                 grid-template-areas: 
                     "a b"
                     "a c";
-                
+                @media (max-width: $point-sm) {
+                    grid-template-areas: 
+                    "a b"
+                    "c c";
+                }
                 .news-item-created {
                     grid-area: a;
                     padding-right: 20px;
@@ -93,13 +97,19 @@
                     }
                 }
                 .news-item-content {
+                    grid-area: c;
                     padding-left: 20px;
                     border-left: 2px solid $gray_text;
                     .link-to-node {
                         float: right;
-                        padding: 8px;
-                        color: $white_text;
-                        background-color: $black_text;
+                        margin-top: 10px;
+                        a {
+                            display: block;
+                            padding: 10px;
+                            color: $white_text;
+                            background-color: $black_text;
+                        }
+
                     }
                     h2{
                         font-weight: normal;

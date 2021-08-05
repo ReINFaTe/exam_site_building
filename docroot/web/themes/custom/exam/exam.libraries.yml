@@ -6,4 +6,5 @@ global-styling:
   js:
     js/menu.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
