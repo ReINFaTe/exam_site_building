@@ -13,8 +13,8 @@ set -e
 
 # PROJECT_ROOT and DOCROOT are set as env variables in cli
 SITE_DIRECTORY="default"
-WEB_PATH="${PROJECT_ROOT}/docroot/web"
-SITEDIR_PATH="${WEB_PATH}/sites/${SITE_DIRECTORY}"
+DOCROOT_PATH="${PROJECT_ROOT}/docroot/"
+SITEDIR_PATH="${DOCROOT_PATH}/web/sites/${SITE_DIRECTORY}"
 
 #-------------------------- END: Settings --------------------------------
 
@@ -55,23 +55,23 @@ copy_settings_file()
 
 composer_install ()
 {
-	cd "${WEB_PATH}"
+	cd "${DOCROOT_PATH}"
 	echo-green "Installing dependencies..."
 	composer install
 }
 
-# Initialize local settings files
-init_settings ()
-{
-	# drupal-composer/drupal-project creates settings.php from default.settings.php.
-	# Since we supply our own settings.php below, we have to drop the default file first.
-	# TODO: Uncomment the local config (settings.local.php) include section in settings.php inline instead.
-	# That'a the only change we need in the stock settings.php
-	rm -f "${SITEDIR_PATH}/settings.php"
+# # Initialize local settings files
+# init_settings ()
+# {
+# 	# drupal-composer/drupal-project creates settings.php from default.settings.php.
+# 	# Since we supply our own settings.php below, we have to drop the default file first.
+# 	# TODO: Uncomment the local config (settings.local.php) include section in settings.php inline instead.
+# 	# That'a the only change we need in the stock settings.php
+# 	rm -f "${SITEDIR_PATH}/settings.php"
 
-	copy_settings_file "${PROJECT_ROOT}/.docksal/settings/settings.php" "${SITEDIR_PATH}/settings.php"
-	copy_settings_file "${PROJECT_ROOT}/.docksal/settings/settings.local.php" "${SITEDIR_PATH}/settings.local.php"
-}
+# 	copy_settings_file "${PROJECT_ROOT}/.docksal/settings/settings.php" "${SITEDIR_PATH}/settings.php"
+# 	copy_settings_file "${PROJECT_ROOT}/.docksal/settings/settings.local.php" "${SITEDIR_PATH}/settings.local.php"
+# }
 
 # Fix file/folder permissions
 fix_permissions ()
@@ -90,7 +90,5 @@ time -p composer_install
 fix_permissions
 
 
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
-echo-yellow "Look for admin login credentials in the output above."
 
 #-------------------------- END: Execution --------------------------------
