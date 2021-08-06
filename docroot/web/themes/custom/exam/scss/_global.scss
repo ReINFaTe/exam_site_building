@@ -73,8 +73,11 @@ input, textarea {
             border-image: linear-gradient(left, rgba($blue_text, $alpha: 0.2), rgba($blue_text, $alpha: 0)) 47% 0%;  
             a,span {
                 padding-left: 20px;
-                display: block;
+                display: inline-block;
                 height: 100%;
+                &:hover: {
+                    box-shadow: none;
+                }
             }
             &:hover {
                 background-position: 0%;

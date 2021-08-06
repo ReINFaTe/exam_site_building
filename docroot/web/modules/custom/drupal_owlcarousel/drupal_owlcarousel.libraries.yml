@@ -5,7 +5,7 @@ drupal_owlcarousel:
       js/owlcarousel/assets/owl.theme.default.min.css: {}
       # css/drupalbook_owlcarousel.css: {}
   js:
-    js/owlcarousel/owl.carousel.min.js: {}
+    js/owlcarousel/owl.carousel.js: {}
     js/drupal_owlcarousel.js: {}
   dependencies:
     - core/jquery

@@ -9,6 +9,8 @@
 .region-footer {
     @extend %container;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     .block-system-branding-block {
         flex-flow: column nowrap;
         text-align: center;
@@ -17,11 +19,19 @@
         .site-name {
             font-size: 40px;
             color: $blue_text;
+            a {
+                &:hover {
+                    box-shadow: none;
+                }
+            }
         }
         .site-slogan {
             color: $slogan_text;
         }
         margin-right: auto;
+        @media (max-width: $point-sm) {
+            margin-right: 0;
+        }
     }
     .block-sociallinks-2 {
         margin: auto 0;

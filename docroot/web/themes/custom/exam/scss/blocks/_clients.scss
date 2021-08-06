@@ -1,4 +1,13 @@
 .view-clients {
     @extend %container;
     padding-bottom: 200px;
+    .owl-item {
+        img {
+            @media (max-width: $point-sm) {
+                width: auto;
+                margin: 0 auto;
+            }
+        }
+        
+    }
 }

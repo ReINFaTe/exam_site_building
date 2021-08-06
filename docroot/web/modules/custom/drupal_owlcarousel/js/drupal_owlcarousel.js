@@ -3,12 +3,14 @@
       attach: function (context, settings) {
         $('.view-clients .view-content').owlCarousel({
           items: 8,
-          responsiveClass:true,
           loop:true,
           dots: true,
+          merge: 0,
+          mergeFit: true,
+
           responsive:{
             0: {
-              items: 3
+              items: 1
             },
             600:{
               items: 4
