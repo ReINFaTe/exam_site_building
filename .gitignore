@@ -14,7 +14,6 @@ docroot/web/core/
 docroot/web/modules/contrib/
 docroot/web/themes/contrib/
 docroot/web/profiles/contrib/
-docroot/web/libraries/
 
 # Ignore sensitive information
 
