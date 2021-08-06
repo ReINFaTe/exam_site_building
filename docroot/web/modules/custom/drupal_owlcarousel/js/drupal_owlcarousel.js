@@ -1,7 +1,7 @@
 (function ($) {
     Drupal.behaviors.drupal_OwlCarousel = {
       attach: function (context, settings) {
-        $('.view-clients .view-content').owlCarousel({
+        $('.view-clients.view-display-id-block_1 .view-content').owlCarousel({
           items: 8,
           loop:true,
           dots: true,
@@ -23,7 +23,7 @@
             }
           }
         });
-        $('.view-clients .view-content').addClass('owl-carousel owl-theme');
+        $('.view-clients.view-display-id-block_1 .view-content').addClass('owl-carousel owl-theme');
       }
     };
   })(jQuery);
